@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fanart.css">
+    <title>fanart</title>
+
+    <style>
+        .container {
+    margin-top: 150px;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+.box {
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+}
+
+.box img {
+    position: absolute;
+    opacity: 0.99;
+    height: 200px;
+    width: 200px;
+}
+.box img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(100px);
+}
+.box img:nth-child(2) {
+    transform: rotateY(90deg) translateZ(100px);
+}
+.box img:nth-child(3) {
+    transform: rotateY(180deg) translateZ(100px);
+}
+.box img:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.box img:nth-child(5) {
+    transform: rotateX(90deg) translateZ(100px);
+}
+.box img:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes loop {
+    from{transform: rotateX(0deg) rotateY(0deg);}
+    to{transform: rotateX(360deg) rotateY(360deg);}
+}
+
+.box{
+    animation: loop 10s linear infinite;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <img src="pics/sushi.png" alt="img">
+            <img src="pics/sushi.png" alt="img">
+            <img src="pics/sushi.png" alt="img">
+            <img src="pics/sushi.png" alt="img">
+            <img src="pics/sushi.png" alt="img">
+            <img src="pics/sushi.png" alt="img">
+           
+           
+            
+           
+          
+
+        </div>
+    </div>
+
+</body>
+</html>
